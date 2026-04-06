@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "my-shop": {
+      "command": "npx",
+      "args": ["@asterpay/mcp-server", "--mode", "seller"],
+      "env": {
+        "ASTERPAY_API_KEY": "ap_write_xxxxxxxxxxxx",
+        "MERCHANT_SLUG": "your-shop-slug"
+      }
+    }
+  }
+}

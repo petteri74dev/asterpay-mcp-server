@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "asterpay-buyer": {
+      "command": "npx",
+      "args": ["@asterpay/mcp-server", "--mode", "buyer"],
+      "env": {
+        "ASTERPAY_API_KEY": "ap_buyer_xxxxxxxxxxxx",
+        "SPENDING_LIMIT_DAILY_EUR": "50",
+        "SPENDING_LIMIT_WEEKLY_EUR": "200"
+      }
+    }
+  }
+}

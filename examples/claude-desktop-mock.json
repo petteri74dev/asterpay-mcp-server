@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "asterpay-demo": {
+      "command": "npx",
+      "args": ["@asterpay/mcp-server", "--mock"]
+    }
+  }
+}
