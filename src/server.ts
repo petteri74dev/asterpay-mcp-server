@@ -39,7 +39,7 @@ export async function startServer(config: Config): Promise<void> {
 
   const server = new McpServer({
     name: serverName,
-    version: "0.1.0",
+    version: "2.0.0",
   });
 
   registerProductTools(server);

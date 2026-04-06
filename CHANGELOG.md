@@ -4,7 +4,12 @@ All notable changes to `@asterpay/mcp-server` will be documented here.
 
 This project follows [Semantic Versioning](https://semver.org/).
 
-## [0.1.0-beta.1] - 2026-04-07
+## [2.0.0-beta.1] - 2026-04-07
+
+Complete rewrite. The v1.x package was a data API wrapper. v2.0 is a full
+dual-mode MCP server for merchant commerce with x402 + EUR settlement.
+
+Breaking changes from v1.x: all tools, resources, and configuration are new.
 
 ### Added
 
