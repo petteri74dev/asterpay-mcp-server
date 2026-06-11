@@ -102,15 +102,18 @@ describe("config", () => {
     expect(() => getConfig()).not.toThrow();
   });
 
-  it("exits on missing API key in non-mock mode", () => {
+  it("boots without API key in non-mock mode (budget-only mode, v2.1.0)", () => {
+    // Changed in 2.1.0: one-line /budget adoption requires booting with zero
+    // env vars. Commerce tools error at call time instead (api-client guard).
     const mockExit = vi
       .spyOn(process, "exit")
       .mockImplementation(() => {
         throw new Error("process.exit called");
       });
 
-    expect(() => loadConfig()).toThrow("process.exit called");
-    expect(mockExit).toHaveBeenCalledWith(1);
+    const config = loadConfig();
+    expect(config.ASTERPAY_API_KEY).toBeUndefined();
+    expect(mockExit).not.toHaveBeenCalled();
     mockExit.mockRestore();
   });
 

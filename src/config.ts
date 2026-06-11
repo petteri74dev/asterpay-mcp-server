@@ -32,11 +32,13 @@ export function loadConfig(): Config {
   const config = result.data;
 
   if (!config.MOCK && !config.ASTERPAY_API_KEY) {
-    log.error(
-      "ASTERPAY_API_KEY is required (or use --mock for demo mode).\n" +
-        "Get yours at https://dashboard.asterpay.io/api-keys",
+    // One-line /budget adoption: the server must boot without any env vars.
+    // Budget tools (set_budget, get_budget_status) need no API key; commerce
+    // tools return a clear error at call time instead (see api-client.ts).
+    log.info(
+      "No ASTERPAY_API_KEY set — running with /budget tools only. " +
+        "Commerce tools need a key from https://dashboard.asterpay.io/api-keys",
     );
-    process.exit(1);
   }
 
   if (

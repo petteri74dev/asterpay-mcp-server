@@ -28,6 +28,14 @@ export async function apiCall(
   body?: unknown,
 ): Promise<unknown> {
   const config = getConfig();
+
+  if (!config.ASTERPAY_API_KEY) {
+    return mcpError(
+      "This tool requires ASTERPAY_API_KEY (get one at https://dashboard.asterpay.io/api-keys). " +
+        "The /budget tools (set_budget, get_budget_status) work without a key.",
+    );
+  }
+
   const requestId = randomUUID().slice(0, 8);
   const url = `${config.ASTERPAY_API_URL}${path}`;
 

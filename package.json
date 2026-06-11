@@ -1,8 +1,8 @@
 {
   "name": "@asterpay/mcp-server",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "mcpName": "io.github.AsterPay/asterpay",
-  "description": "MCP server for AI agents to discover and buy from European merchants via x402 + EUR settlement",
+  "description": "MCP server for AI agent commerce: /budget prepaid spending money with a hard cap (no API key needed), plus tools to discover and buy from European merchants via x402 + EUR settlement",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
