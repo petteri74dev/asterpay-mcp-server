@@ -8,7 +8,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "asterpay-mcp": "./dist/index.js"
+    "asterpay-mcp": "dist/index.js"
   },
   "exports": {
     ".": {
@@ -46,7 +46,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/asterpay/mcp-server"
+    "url": "git+https://github.com/asterpay/mcp-server.git"
   },
   "homepage": "https://asterpay.io",
   "bugs": {
